@@ -62,6 +62,19 @@ docker-compose up -d
 
 and enjoy it on `http://localhost:8080`.
 
+### Direct commands to run the project in docker without docker-compose.yml:
+
+After having this file we can create our image through the command line (CLI), going to the directory where our Dockerfile is located and then typing the command:
+
+  $ docker build -t your-container-name .
+
+Build a container from this created image:
+
+The "build" command is to build our container from this image that we created in the Dockerfile the "-t" tag is to add a tag to our image, in this case a name for this image that you prefer the "." at the end indicates that the docker should look for the Dockerfile in the current directory where the CLI is located
+
+After that we can use the following command to run our container created on a specific port of our localhost:
+
+  $ docker run -dp 8080:8080 name-of-your-container 
 ### Kubernetes
 
 _Coming soon_
